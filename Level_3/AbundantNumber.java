@@ -8,7 +8,7 @@ public class AbundantNumber {
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
 
-        // Initialize sum variable to store the sum of divisors
+        // Initialize sum variable to store the sum of divisors.
         int sum = 0;
 
         // Step 1: Run a for loop to find divisors of the number
