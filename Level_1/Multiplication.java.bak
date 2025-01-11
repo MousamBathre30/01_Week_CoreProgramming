@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+
+public class Multiplication{
+	
+	public static void main(String args[]){
+	   // taking input of different number 
+	   
+	   Scanner scanner = new Scanner(system.in);
+	   
+	   // entering the number by the user define the working year
+	   int n = scanner.nextInt();  
+       // entering the salary.
+       int salary = scanner.nextInt();	
+       // variable for storing bonus.	  
+        int bonusamount;	   
+	   // check year of working is greater then 5 then get bonus 
+	   
+	   if(n>5){
+	   // for loop for checking the even and odd form 1 to n using if.   
+         bonusamount = salary * 0.05;	
+         System.out.println("BonusAmount is " + bonusamount )	;	 
+	    } else{
+	     System.out.println("Nope! not get the bonusamount ");	 
+		}
+		
+	   scanner.close();
+	}
+}

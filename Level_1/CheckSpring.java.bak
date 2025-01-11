@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+
+public class CheckSpring{
+	
+	public static void main(String args[]){
+	   // taking input of different number 
+	   
+	   Scanner scanner = new Scanner(system.in);
+	   int age = scanner.nextInt();
+	   
+	   // check if the number is grater then o or then it is positive
+	   if(age >= 18 ){
+		   System.out.println("Positive");
+	   } 
+       // check if the number is equall to zero then zero
+ 	   else if(number == 0){
+		   System.out.println("Zero");
+	   }
+	   // else it negative
+	   else{
+		   System.out.println("Negative.");
+	   }
+	   
+	   scanner.close();
+	}
+}
+
+
