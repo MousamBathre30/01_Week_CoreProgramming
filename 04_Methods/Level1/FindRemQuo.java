@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+import java.lang.Math;
+import java.util.*;
+
+public class FindRemQuo{
+ 
+   // calculate the number 
+   public static int [] findRemainderAndQuotient(int number , int divisor){
+      
+	    int [] array   = new int[2];
+	   int remder =0;
+	   int  quotient =0;
+	   
+	   remder = number % divisor;
+	   array [0] = remder;
+	   quotient = number / divisor;
+	   array [1] = quotient;
+	   
+	   return array;
+   }
+   
+ 
+  
+  // main method to start the program 
+   
+  public static void main(String args[]){
+     
+	 Scanner scanner = new Scanner(System.in);
+	 
+	 
+	 // enter the number. 
+	 System.out.println("enter the 2 number and divisor number");
+	 int number1 = scanner.nextInt();
+	 int number2 = scanner.nextInt();
+	 
+	 
+	 int [] array = findRemainderAndQuotient(number1 , number2);
+	 
+    
+	  
+	  System.out.println("Remender " + array[0] + "quotient element is " + array[1]);
+   
+  }  
+      
+   
+}
