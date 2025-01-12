@@ -1,0 +1,62 @@
+
+import java.util.Scanner;
+
+public class NaturalSum{
+ 
+   // calculate the number 
+   public static int FindSmallestAndLargest(int n1, int n2,int n3){
+     
+	 if(n1 < n2 && n1 < n3){
+		 return 1;
+		 
+	 } else if(n2 < n3 && n2 < n1){
+		 return 2;
+	 } else {
+		 return 0;
+	 }
+	 
+	if(n1 > n2 && n1 > n3){
+		 return 11;
+	 } else if(n2 > n3 && n2 > n1){
+		 return 12;
+	 } else {
+		 return 00;
+	 }
+	 
+   }
+   
+ 
+  
+  // main method to start the program 
+   
+  public static void main(String args[]){
+     
+	 Scanner scanner = new Scanner(System.in);
+	 
+	 
+	 // enter the number. 
+	 System.out.println("enter the 3 number");
+	 int number1 = scanner.nextInt();
+	 int number2 = scanner.nextInt();
+	 int number3 = scanner.nextInt();
+	 
+	 int val = findSmallestAndLargest();
+	 // call the method in the System.out.println Subroutine 
+	 if(val == 1){
+		 System.out.println("Smallest element is number 1" + number1 );
+	 }else if(val==2){
+		 System.out.println("Smallest element is number 2 " + number2);
+	 } else if( val  == 0) {
+		 System.out.println("Smallest element is number3 " + n3);
+	 }else if(val ==11){
+		 System.out.println("largest element is number 1" + n1 );
+	 } else if( val ==12){
+		 System.out.println("largest element is number 1" + n1 );
+	 } else{
+		 System.out.println("largest element is number 1" + n1 );
+	 }
+   
+  }  
+      
+   
+}

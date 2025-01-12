@@ -1,0 +1,43 @@
+
+import java.util.Scanner;
+
+public class TriangularPark{
+ 
+   // calculate the parameter 
+   public static int calculation(int side1, int side2 , int side3 ){
+     int parameter = (side1 + side2 + side3);
+     return parameter;
+   }
+   
+   // calclate the round 
+   public static int calculateRound(int parameter , int distance){
+	   int round = (parameter/distance);
+	   return round;
+   }
+  
+  // main method to start the program 
+   
+  public static void main(String args[]){
+     
+	 Scanner scanner = new Scanner(System.in);
+	 
+	 // enter the numeber of sides of park by the user
+	 System.out.println("Enter the Number of sides");
+	 int sides = scanner.nextInt();
+	 // enter the different sides 
+	 int side1 = scanner.nextInt();
+	 int side2 = scanner.nextInt();
+	 int side3 = scanner.nextInt(); 
+	 
+	 // distanc that is covert by athelits 
+	 int distance = 5;
+	 // call the method in the System.out.println Subroutine 
+	int parameter = calculation(side1,side2,side3);
+	int round = calculateRound(parameter , distance);
+ 	System.out.println("Maximum number round " + round);
+	 
+  
+  }  
+      
+   
+}
