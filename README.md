@@ -1,1 +1,0 @@
-# Capgimini_Assignments
