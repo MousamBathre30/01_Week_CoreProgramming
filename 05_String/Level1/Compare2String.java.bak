@@ -1,0 +1,50 @@
+
+import java.util.Scanner;
+
+
+
+
+
+
+public class Compare2String{
+
+   public static boolean isStringMathch(String str1, String str2){
+	   
+	   for(int i=0; i<str1.length(); i++){
+		   if(str1.charAt(i) != Str2.charAt(i)){
+			   return false;
+		   }
+	   }
+	   return true;
+   }
+   
+   public static boolean isStringMathchBymethod(String str1, String str2){
+	   
+	   return str1.equals(str2);
+   }
+  
+ public static void main(String args[]){
+    
+	
+	Scanner scanner = new Scanner(System.in);
+	
+    // enter the strings 
+
+    System.out.println("Enter the two different Strings !");
+    String str1 = scanner.nextLine();
+    System.out.println("First String is  " + str1);
+ 	String str2 = scanner.nextLine();
+    System.out.println("First String is  " + str2);
+	
+	// method to check the two string is equal or not.
+	
+	boolean isStringMathch = isStringMathch(str1 ,str2);
+	boolean isStringMatchbymethod = isStringMathchBymethod(str1,str2);
+	
+	System.out.println("Given String is match " + isStringMathch);
+	System.out.println("Given String is match " + isStringMatchbymethod());
+	
+	
+ }
+   
+}

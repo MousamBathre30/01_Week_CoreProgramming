@@ -1,0 +1,59 @@
+import java.lang.Integer;
+
+import java.util.Scanner;
+public class CaompareUppercase {
+
+
+  public static String getUppercase(String text){
+	 
+	   String ans = "";
+
+        for(int i=0; i<text.length(); i++){
+			int val = text.charAt(i);
+			if( val < 96){
+				ans += (char)(text.charAt(i) + 32);
+			}else{
+				ans += text.charAt(i);
+			}
+		}	 
+		
+		System.out.println(ans);
+	  return ans;
+  }
+     
+	public static String getUppercasebyMethod(String text){
+		String ans = text.toLowerCase(); 
+		System.out.println(ans);
+		return ans;
+	} 
+	
+	public static void result(String uppercasetext , String bymethod){
+		
+		boolean result =  uppercasetext.equals(bymethod);
+		if(result){System.out.println("get the Right");}
+		else {System.out.println("get the wrong");}
+	}
+	 
+   public static void main(String args[]){
+      Scanner sc = new Scanner(System.in);
+	   
+	   // text to uppercase 
+	  
+	  System.out.println("enter text");
+	  
+	  String text = sc.nextLine();
+	  
+	  // convert the text to uppercase 
+	  
+	   String uppercasetext = getUppercase(text);
+	  
+	   String bymethod = getUppercasebyMethod(text);
+	  
+	   result(uppercasetext, bymethod);
+	  
+	  
+	  
+   }
+
+
+}

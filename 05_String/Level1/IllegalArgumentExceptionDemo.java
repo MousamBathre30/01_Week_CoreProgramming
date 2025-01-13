@@ -1,0 +1,58 @@
+ 
+import java.util.Scanner;
+
+
+
+
+
+
+public class IllegalArgumentExceptionDemo{
+	
+	      // method that generate string array out of bount 
+         
+	      public static void generate(String str1){
+			  
+			 try{
+				 System.out.println(str1.substring(0,9));
+			 } catch(Exception e){
+				 System.out.println("Exception is generate method" + e.getMessage());
+			 }
+			  
+			  }
+			
+			
+			// method to handel run time exception 
+			
+	      public static void handle(String str1){
+
+			  try{
+				  System.out.println(str1.substring(4,0));
+				  
+			  }catch(IllegalArgumentException e){
+				  System.out.println("Illegal argument present in this field " + e.getMessage());
+			  }catch(Exception e){
+				  System.out.println("Generic Exception =>" + e.getMessage());
+			  }
+		  }		 
+  
+ public static void main(String args[]){
+    
+	
+	Scanner scanner = new Scanner(System.in);
+	
+    // enter the strings #]
+	 
+	 // generate exeption
+	  
+	  String str = scanner.nextLine();
+	  
+	 generate(str);
+	 
+	// isStringMathch();
+	  
+	  handle(str);
+	
+    
+ }
+   
+}
