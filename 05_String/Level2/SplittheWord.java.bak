@@ -1,0 +1,32 @@
+  /*
+  
+  |\\\    \ 
+  
+  */
+  
+  import java.util.Scanner;
+  
+  public class SplittheWord{
+    
+	
+	public static void getthesplitarray(String str){
+		String splitarray [] = new String[4];
+		
+		
+		for(int i=0; i<splitarray.length; i++){
+			 splitarray[i] = str.split("\\+s"); 
+		}
+		
+		
+	}
+	
+	
+    public static void  main (String args []){
+
+	  Scanner scanner = new Scanner(System.in);
+	  // mousam is the best.
+	  String str = scanner.nextLine();
+	  
+	  getthesplitarray(str);
+	}
+  }

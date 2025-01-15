@@ -1,0 +1,65 @@
+
+import java.util.Scanner;
+import java.util.*;
+
+public class Solve{
+
+
+  public static void angram(String str1 , String str2){
+  
+      if(str1.length() != str2.length()){
+		  
+		System.out.println("Not a anagram");
+		return;
+	  }
+	  
+	  String array [] = str1.toCharArray();
+	  String array2 [] = str2.toCharArray();
+	  
+	  Arrays.sort(array);
+	  Arrays.sort(array2);
+	  
+	  
+	  for(int i=0; i<array.length; i++){
+		  
+		  if(array[i] != array2[i] ){
+			System.out.println("Given string is not a anagram");  
+		  }
+	  }
+	  System.out.println("Given string is anagram");  
+  }
+  
+ /*
+  
+  public static void replace(String str1 , String str2){
+	  
+	  
+	  String ans = "";
+	  for(int i=0; i<str1.length(); i++){
+		  
+		  if(str1.charAt(i) == 'm'){
+			  ans += str2;
+		  }else{
+			  ans+= str1.charAt(i);
+		  }
+	  }
+	  
+	  System.out.println(ans);
+  }
+
+*/
+ public static void main(String args[]){
+   
+   Scanner scanner = new Scanner(System.in);
+   
+   String str1 = scanner.nextLine();
+   
+   String str2 = scanner.nextLine();
+   
+   // mousam - > j  
+   
+    angram(str1 , str2);
+   // replace(str1,str2);
+ 
+ }
+}

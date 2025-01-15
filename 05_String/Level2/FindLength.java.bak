@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+
+public class FindLength{
+  
+  public static void getthelength(String str){
+	  
+	  int count = 0;
+	  int index = 0;
+	  while(true){
+		  
+		  try{
+		  str.charAt(index) ;
+			  count++;
+			  index++;
+		  }
+		   catch(Exception e){
+			  System.out.println(count);
+			  System.out.println("String index out of the bound" + e.getMessage());
+		  }
+		  
+	  }
+	  
+  }
+  
+  
+  public static void main(String args []){
+    Scanner scanner = new Scanner(System.in);
+	String str = scanner.nextLine();
+	
+	getthelength(str);
+	
+  
+  }
+
+
+}
