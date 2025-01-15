@@ -1,0 +1,46 @@
+
+
+import java.util.Scanner;
+public class NonRepeating{
+
+public static int [] getPresent(String str){
+	  int n= str.length();
+	  String temp = "";
+	   int [] chararray = new int[26];
+	   for(int i=0; i<n; i++){
+
+	   chararray[str.charAt(i) - 'a']++;
+		   
+		   }
+	
+	   // abc 
+	   return chararray;
+	  
+ 
+  }
+  
+  public static void display(int array [], String str){
+	  // method for display
+	  for(int i=0; i<str.length(); i++){
+		  if(array[str.charAt(i)-'a'] == 1){
+			  System.out.println("Here is the non repeating character is " + str.charAt(i) );
+			  return;
+		  }
+	  }
+	  System.out.println("everyone haveing atlease 2 occurence ");
+  }
+  
+  
+  
+   public static void main(String args[]){
+   
+   
+   // taking user input the/
+    Scanner sc = new Scanner(System.in);
+	String str = sc.nextLine();
+    int [] array = getPresent(str);
+	display(array , str);
+   }
+  
+  
+  }

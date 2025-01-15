@@ -1,0 +1,71 @@
+import java.util.Scanner;
+import java.util.*;
+public class BMI {
+
+
+ public static String [][] getCalculate(double height [] , double weight []){
+	 
+	 // calculateBMI 
+	 double [] bmi = new double[11];
+	 for(int i = 0; i< 11 ; i++){
+		  bmi [i] = weight[i]/ (height[i] * height[i] );
+		 
+	 }
+	 String [][] Bmi = new String [11][2]; 
+	 
+	 
+	 for(int i=0; i<11; i++){
+		 for(int j=0; j<2; j++){ 
+		    if(j == 0){
+			   Bmi [i][j] = String.format("%.2f",bmi[i]) ;
+			} else{
+				if(bmi[i] <= 18.4){
+				   Bmi [i][j] = "Underweight";
+				}   
+			    else if (bmi[i] <= 24.9 && bmi[i] >= 18.5){
+					Bmi[i][j] = "Normal";
+				}else if (bmi[i] <= 39.9 && bmi[i] >= 30){
+					Bmi[i][j] = "Overweight";
+				}else{
+					Bmi[i][j] = "Obese";
+				}
+			}  
+		 }
+	 }
+	 
+	 return Bmi;
+ }
+ 
+ 
+ public static void display(String [][] Bmi){
+	 
+	System.out.println("Bmi --------- Status");
+	for(int i=0; i<11; i++){
+		for(int j=0; j<2; j++){
+			System.out.print(Bmi[i][j] + " ! " );
+		}
+		System.out.println();
+	} 
+	 
+ }
+
+  public static void main(String args []){
+    
+     // take the user input of weight and heigh -2d array 
+	 //  first coloum - weight seccond height 
+	 
+	 // create a method 
+	 
+	 
+	 Scanner scanner = new Scanner(System.in);
+	 double [] height = new double[11];
+	 double [] weight = new double[11];
+	 for(int i=0; i<11; i++){
+		 height [i] = scanner.nextInt();
+		 weight [i] = scanner.nextInt();
+	 }
+	 
+	 String [][] calculateBMI = getCalculate(height ,weight);
+	 display(calculateBMI);
+  }
+}
