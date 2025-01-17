@@ -1,0 +1,23 @@
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+
+import java.time.temporal.ChronoUnit;
+
+import java.util.Scanner;
+
+
+public class  CurrentTimeDisplay{
+
+
+   public static void main (String args[]){
+   
+     // displaycurrent time with different time zone;
+	 
+	 // Hint: Use ZonedDateTime and ZoneId to work with different time zones.
+  
+      
+	  
+	  System.out.println(ZonedDateTime.now());
+  }
+}

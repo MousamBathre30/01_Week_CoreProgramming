@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class RemoveChracter{
+
+
+   public static void getfreq(String str1 , char ch){
+	   
+	   int n = str1.length();
+       
+	   String ans = "";
+	  
+	   
+	   for(int i=0; i<n; i++){
+		   if(str1.charAt(i) != ch){
+			   ans += str1.charAt(i);
+		   }
+		  } 
+		  
+	   
+	   
+	   System.out.println("Remaning word is  " + ans );
+	   
+   }
+
+
+  
+
+   public static void main(String args[]){
+	   
+	   Scanner scanner = new Scanner(System.in);
+	   
+	   // enter the string 
+	   String str1 = scanner.nextLine();
+ 	   char ch = scanner.nextLine().charAt(0);
+	   
+	   getfreq(str1 , ch);
+     
+   }
+  
+}

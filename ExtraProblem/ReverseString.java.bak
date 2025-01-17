@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ReverseString{
+
+
+   public static void getReverse(String str){
+	   
+	   int countOfVovel = 0;
+	   int countOfConsonet = 0;
+	   String temp = "";
+	   int n = str.length();
+	   for(int i=n-1; i>=0; i++){
+		   temp += str.charAt(i);
+		   
+	   }
+	   
+	   
+	   System.out.println("reverse string is  " +  temp);
+	   System.out.println("non reverse string is " + str);
+	   
+   }
+
+
+   public static void main(String args[]){
+	   
+	   Scanner scanner = new Scanner(System.in);
+	   
+	   // enter the string 
+	   String str = scanner.nextLine().trim();
+	   
+	   getReverse(str);
+
+	   
+   }
+  
+}
